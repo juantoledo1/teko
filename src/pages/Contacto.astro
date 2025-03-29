@@ -1,0 +1,78 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const contactInfo = {
+  whatsapp: [
+    { number: "+54 9 3764 67-4458", link: "https://wa.me/5493761234567" },
+    { number: "+54 9 223 301-7842", link: "https://wa.me/5493769876543" }
+  ],
+  email: "tekohatech@gmail.com"
+};
+---
+
+<section id ="contacto" class="contact-section py-5">
+  <div class="container mt-5 pt-5">
+    <h2 class="text-center gradient-text mb-5">Contacto</h2>
+    <p class="text-center text-light mb-5">Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6 text-center">
+        <h3 class="text-light">WhatsApp</h3>
+        <ul class="list-unstyled">
+          {contactInfo.whatsapp.map(contact => (
+            <li class="mb-3">
+              <a href={contact.link} target="_blank" class="text-light">
+                <i class="fab fa-whatsapp fa-2x me-2"></i>
+                {contact.number}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h3 class="text-light">Email</h3>
+        <p class="text-light">
+          <i class="fas fa-envelope fa-2x me-2"></i>
+          <a href={`mailto:${contactInfo.email}`} class="text-light">{contactInfo.email}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .gradient-text {
+    background: linear-gradient(45deg, #026135, #180cc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-section {
+    background: linear-gradient(45deg, #1f11eb, #00ff88);
+  }
+
+  .container.mt-5.pt-5 {
+    margin-top: 6rem;
+    padding-top: 3rem;
+  }
+
+  .text-light a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .text-light a:hover {
+    color: #cccccc;
+  }
+
+  .fab, .fas {
+    vertical-align: middle;
+  }
+</style>
+
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

@@ -1,0 +1,138 @@
+<section id="planes" class="planes p-5" style="background: linear-gradient(35deg, #2a1dde, #0a0908, #140a1d); min-height: 100vh;">
+    <h1 class="text-center text-light p-4">Planes</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 rounded border-5 border-secundary m-3 bg-secondary-subtle text-secondary-emphasis ">
+                <img src="pyme.jpg" class="card-img-top" alt="pymeCard">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-decoration-underline">Mi Primer Web </h5>
+                    <p class="card-text text-center">Ideal para pequeñas empresas o individuos que necesitan una presencia web</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalBasico">Ver Planes</button>
+                </div>
+            </div>
+        </div>
+        <div class="col" >
+            <div class="card  h-100 rounded border-5 border-info m-3 bg-info-subtle text-info-emphasis  " >
+                <img src="empresa.jpg" class="card-img-top" alt="empresaCard">
+                <div class="card-body " >
+                    <h5 class="card-title  text-center text-decoration-underline">Web Empresa</h5>
+                    <p class="card-text text-center">Perfecto para medianas empresas que necesitan funciones adicionales</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalEmpresa">Ver Planes</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rounded border-5 border-warning m-3 bg-warning-subtle text-warning-emphasis">
+                <img src="profecional.jpg" class="card-img-top" alt="profecionalCard">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-center text-decoration-underline">Web Premium</h5>
+                    <p class="card-text text-center">Diseñado para grandes empresas que requieren un sitio web avanzado</p>
+                </div>
+                <div class="card-footer">
+                    <button class="premium btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPremium">Ver Planes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Básico -->
+<div class="modal fade " id="exampleModalBasico" tabindex="-1" aria-labelledby="exampleModalLabelBasico" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary-subtle text-secondary-emphasis ">
+                <h5 class="modal-title " id="exampleModalLabelBasico ">Mi Primer Web</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
+                <!-- Contenido del Plan Básico -->
+                <h2>Mi Primer Web</h2>
+                <h3>Descripción:</h3>
+                <p>Ideal para pequeñas empresas o individuos que necesitan una presencia web profesional y funcional que ayudará a visibilizarte en internet.</p>
+                <h3>Características::</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">Diseño web atractivo.</li>
+                    <li class="list-group-item">Hasta 4 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto).</li>
+                    <li class="list-group-item">Dominio gratuito por un año.</li>
+                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas.</li>
+                    <li class="list-group-item">Links a redes sociales.</li>
+                    <li class="list-group-item">Botón directo a WhatsApp.</li>
+                  </ul>
+            </div>
+            <div class="modal-footer bg-secondary-subtle text-secondary-emphasis">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Empresa -->
+<div class="modal fade" id="exampleModalEmpresa" tabindex="-1" aria-labelledby="exampleModalLabelEmpresa" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info-subtle text-info-emphasis">
+                <h5 class="modal-title" id="exampleModalLabelEmpresa">Web Empresa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                 <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
+                
+                    <h2>Web Empresa</h2>
+                     <h3>Descripción:</h3>
+                    <p>Perfecto para medianas empresas que necesitan funciones adicionales y mayor capacidad de personalización.</p>
+                    <h3>Características::</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Diseño web atractivo.</li>
+                    <li class="list-group-item">Hasta 5 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto/Fotos).</li>
+                    <li class="list-group-item">Dominio gratuito por un año.</li>
+                    <li class="list-group-item">Integración con redes sociales.</li>
+                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas.</li>
+                    <li class="list-group-item">Email.</li>
+                    <li class="list-group-item"> Galería de fotos.</li>
+                    <li class="list-group-item">Links a redes sociales.</li>
+                    <li class="list-group-item">Botón directo a WhatsApp.</li>
+                  </ul>
+                </div>
+            <div class="modal-footer bg-info-subtle text-info-emphasis">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Premium -->
+<div class="modal fade" id="exampleModalPremium" tabindex="-1" aria-labelledby="exampleModalLabelPremium" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning-subtle text-warning-emphasis">
+                <h5 class="modal-title" id="exampleModalLabelPremium">Web Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
+                <!-- Contenido del Plan Premium -->
+                <h2>Web Premium</h2>
+                <h3>Descripción:</h3>
+                <p>Diseñado para grandes empresas que requieren un sitio web avanzado con todas las funcionalidades.</p>
+                <h3>Características::</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Diseño exclusivo y personalizado.</li>
+                    <li class="list-group-item">- Integración con redes sociales.</li>
+                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas</li>
+                    <li class="list-group-item"> Email.</li>
+                    <li class="list-group-item">Galería de fotos.</li>
+                    <li class="list-group-item">Links a redes sociales.</li>
+                    <li class="list-group-item">Botón directo a WhatsApp y correo.</li>
+                    <li class="list-group-item">Páginas acorde a necesidades.</li>
+                    <li class="list-group-item">Opcional: Carrito de compras (MercadoPago).</li>
+                </ul>
+            </div>
+            <div class="modal-footer bg-warning-subtle text-warning-emphasis">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

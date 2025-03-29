@@ -1,0 +1,134 @@
+---
+// Valores de ejemplo para la primera tarjeta, que podrían venir de una API en el futuro.
+const firstCardInfo = {
+  title: 'Paliachi',
+  image: '/Paliachi.webp',  // URL de la imagen de la web externa
+  link: 'https://paliachi.com/',                     // URL de redirección al sitio externo
+  buttonText: 'Ver más'
+};
+
+const secondCardInfo = {
+  title: 'Giorno Pizzas',
+  image: '/giorno.webp',  // URL de la imagen de la web externa
+  link: 'https://giornopizzas.free.nf/',                     // URL de redirección al sitio externo
+  buttonText: 'Ver más'
+};
+
+const thirdCardInfo = {
+  title: 'Juan Toledo Peluquero',
+  image: '/logoNuevo.webp',  // URL de la imagen de la web externa
+  link: 'https://juantoledopeluquero.netlify.app/',                     // URL de redirección al sitio externo
+  buttonText: 'Ver más'
+};
+
+
+
+// Datos por defecto para las demás tarjetas.
+// const { title = 'Tekoha', image = '/LogoTekoha.png', buttonText = 'Ver más' } = Astro.props;
+---
+
+<section class="portfolio-section">
+  <h2 class="gradient-text text-center mb-4">Trabajos Realizados</h2>
+  <div class="container">
+    <div class="row">
+      <!-- Primera tarjeta con datos externos -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card">
+                <img src={firstCardInfo.image} alt={firstCardInfo.title} />
+                <h3>{firstCardInfo.title}</h3>
+                <!-- Botón con enlace al sitio externo -->
+                <a href={firstCardInfo.link} class="card-button-link">
+                  <button>{firstCardInfo.buttonText}</button>
+                </a>
+              </div>
+            </div>
+            <!-- Segunda tarjeta con datos externos -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card">
+                <img src={secondCardInfo.image} alt={secondCardInfo.title} />
+                <h3>{secondCardInfo.title}</h3>
+                <!-- Botón con enlace al sitio externo -->
+                <a href={secondCardInfo.link} class="card-button-link">
+                  <button>{secondCardInfo.buttonText}</button>
+                </a>
+              </div>
+            </div>
+             <!-- Segunda tarjeta con datos externos -->
+             <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card">
+                <img src={thirdCardInfo.image} alt={thirdCardInfo.title} />
+                <h3>{thirdCardInfo.title}</h3>
+                <!-- Botón con enlace al sitio externo -->
+                <a href={thirdCardInfo.link} class="card-button-link">
+                  <button>{thirdCardInfo.buttonText}</button>
+                </a>
+              </div>
+            </div>   
+    </div>
+  </div>
+</section>
+
+<style>
+.gradient-text {
+    background: linear-gradient(45deg, #026135, #180cc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-section {
+    padding: 32px 16px;
+    background: linear-gradient(45deg, #00ff88, #1f11eb);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #1063bb;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.card-button-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card button {
+    margin-top: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+</style>

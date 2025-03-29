@@ -1,0 +1,84 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const props = {
+  juan: {
+    name: "Juan Manuel Toledo",
+    description: "Soy Juan Manuel Toledo, cofundador de Tekohatech y desarrollador web full stack, además de técnico superior en marketing y publicidad. Con base en Posadas, Misiones, Argentina, mi pasión por la tecnología y el desarrollo web me ha llevado a dominar una amplia gama de herramientas y lenguajes. Utilizo estos conocimientos para crear soluciones innovadoras y eficientes para PYMEs y empresas.",
+    image: "../../Juan1.webp"
+  },
+  mauro: {
+    name: "Mauro Flores",
+    description: "Soy Mauro Flores, cofundador de Tekohatech y desarrollador web full stack y viajero con base en Florianópolis,Brasil. Soy un entusiasta de la tecnología, apasionado por el diseño, y siempre dispuesto a participar en una minga, una colaboración colectiva según las tradiciones de los pueblos originarios.",
+    image: "../../foto_mau.webp"
+  }
+};
+---
+
+
+
+<section id ="nosotros" class="container-fluid py-5 gradient-background">
+  <div class="container mt-5 pt-5">
+    <h2 class="gradient-text text-center mb-4">Nosotros</h2>
+    <div class="row text-center">
+      <div class="col-md-6">
+        <div class="image-container rounded-circle mx-auto">
+          <img src={props.juan.image} alt="Juan Manuel Toledo" class="img-fluid grayscale rounded-circle">
+        </div>
+        <h3 class="gradient-text mt-3">{props.juan.name}</h3>
+        <p>{props.juan.description}</p>
+      </div>
+      <div class="col-md-6">
+        <div class="image-container rounded-circle mx-auto">
+          <img src={props.mauro.image} alt="Mauro Flores" class="img-fluid grayscale rounded-circle">
+        </div>
+        <h3 class="gradient-text mt-3">{props.mauro.name}</h3>
+        <p>{props.mauro.description}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  .gradient-background {
+    background: linear-gradient(45deg, #1f11eb, #00ff88);
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #026135, #180cc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    transition: filter 0.3s ease;
+  }
+
+  .rounded-circle {
+    border-radius: 50%;
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .image-container:hover img {
+    filter: grayscale(0%);
+  }
+
+  .container.mt-5.pt-5 {
+    margin-top: 6rem; /* Ajustado para asegurarse de que el contenido no esté demasiado cerca del navbar */
+    padding-top: 3rem;
+  }
+</style>
