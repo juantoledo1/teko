@@ -15,9 +15,9 @@ const secondCardInfo = {
 };
 
 const thirdCardInfo = {
-  title: 'Juan Toledo Peluquero',
-  image: '/logoNuevo.webp',  // URL de la imagen de la web externa
-  link: 'https://juantoledopeluquero.netlify.app/',                     // URL de redirección al sitio externo
+  title: 'Betelgeuse',
+  image: '/betell.png',  // URL de la imagen de la web externa
+  link: 'https://betelgeusee.netlify.app/',                     // URL de redirección al sitio externo
   buttonText: 'Ver más'
 };
 
@@ -30,36 +30,36 @@ const thirdCardInfo = {
 <section class="portfolio-section">
   <h2 class="gradient-text text-center mb-4">Trabajos Realizados</h2>
   <div class="container">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <!-- Primera tarjeta con datos externos -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
               <div class="card">
                 <img src={firstCardInfo.image} alt={firstCardInfo.title} />
                 <h3>{firstCardInfo.title}</h3>
                 <!-- Botón con enlace al sitio externo -->
-                <a href={firstCardInfo.link} class="card-button-link">
+                <a href={firstCardInfo.link} target="_blank" class="card-button-link">
                   <button>{firstCardInfo.buttonText}</button>
                 </a>
               </div>
-            </div>
+            <!-- </div> -->
             <!-- Segunda tarjeta con datos externos -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <!-- <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card">
                 <img src={secondCardInfo.image} alt={secondCardInfo.title} />
-                <h3>{secondCardInfo.title}</h3>
+                <h3>{secondCardInfo.title}</h3> -->
                 <!-- Botón con enlace al sitio externo -->
-                <a href={secondCardInfo.link} class="card-button-link">
+                <!-- <a href={secondCardInfo.link} target="_blank" class="card-button-link">
                   <button>{secondCardInfo.buttonText}</button>
                 </a>
-              </div>
+              </div> -->
             </div>
              <!-- Segunda tarjeta con datos externos -->
-             <div class="col-12 col-md-6 col-lg-4 mb-4">
+             <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
               <div class="card">
                 <img src={thirdCardInfo.image} alt={thirdCardInfo.title} />
                 <h3>{thirdCardInfo.title}</h3>
                 <!-- Botón con enlace al sitio externo -->
-                <a href={thirdCardInfo.link} class="card-button-link">
+                <a href={thirdCardInfo.link} target="_blank" class="card-button-link">
                   <button>{thirdCardInfo.buttonText}</button>
                 </a>
               </div>
