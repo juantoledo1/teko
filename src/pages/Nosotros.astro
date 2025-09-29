@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const props = {
   juan: {
     name: "Juan Manuel Toledo",
-    description: "Soy Juan Manuel Toledo, cofundador de Tekohatech y desarrollador web full stack, técnico en ciberseguridad y además técnico superior en marketing y publicidad. Con base en Posadas, Misiones, Argentina, mi pasión por la tecnología y el desarrollo web me ha llevado a dominar una amplia gama de herramientas y lenguajes. Utilizo estos conocimientos para crear soluciones innovadoras y eficientes para PYMEs y empresas.",
+    description: "Soy Juan Manuel Toledo, CEO de Tekohatech y desarrollador web full stack, técnico en ciberseguridad y además técnico superior en marketing y publicidad. Con base en Posadas, Misiones, Argentina, mi pasión por la tecnología y el desarrollo web me ha llevado a dominar una amplia gama de herramientas y lenguajes. Utilizo estos conocimientos para crear soluciones innovadoras y eficientes para PYMEs y empresas.",
     image: "../../Juan1.webp"
   },
   mauro: {
@@ -18,24 +18,24 @@ const props = {
 
 
 
-<section id ="nosotros" class="container-fluid py-5 gradient-background">
+<section id="nosotros" class="container-fluid py-5 gradient-background">
   <div class="container mt-5 pt-5">
     <h2 class="gradient-text text-center mb-4">Nosotros</h2>
-    <div class="row text-center">
-      <div class="col-md-6">
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-8">
         <div class="image-container rounded-circle mx-auto">
-          <img src={props.juan.image} alt="Juan Manuel Toledo" class="img-fluid grayscale rounded-circle">
+          <img src={props.juan.image} alt="Juan Manuel Toledo" class="img-fluid grayscale rounded-circle" />
         </div>
         <h3 class="gradient-text mt-3">{props.juan.name}</h3>
-        <p class="h5" >{props.juan.description}</p>
+        <p class="h5">{props.juan.description}</p>
       </div>
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <div class="image-container rounded-circle mx-auto">
           <img src={props.mauro.image} alt="Mauro Flores" class="img-fluid grayscale rounded-circle">
         </div>
         <h3 class="gradient-text mt-3">{props.mauro.name}</h3>
         <p class="h5">{props.mauro.description}</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
