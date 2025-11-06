@@ -1,39 +1,60 @@
-<section id="planes" class="planes p-5" style="background: linear-gradient(35deg, #2a1dde, #0a0908, #140a1d); min-height: 100vh;">
-    <h1 class="text-center gradient-text p-4">Planes</h1>
+---
+import '../styles/global.css';
+import '../styles/planes.css';
+---
+
+<section id="planes" class="planes p-5" style="background: linear-gradient(35deg, #2a1dde, #0a0908, #140a1d); min-height: 100vh; position: relative;">
+    <!-- Efecto de transición suave entre secciones -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #6495ED, transparent); filter: blur(1px);"></div>
+    
+    <h2 class="text-center gradient-text section-title mb-3">Planes</h2>
+    <p class="text-center text-light mb-5 fs-5">Elige el plan perfecto para tu negocio</p>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-            <div class="card h-100 rounded border-5 border-secundary m-3 bg-secondary-subtle text-secondary-emphasis ">
-                <img src="pyme.jpg" class="card-img-top" alt="pymeCard">
+            <div class="card h-100 rounded m-3 bg-secondary-subtle text-secondary-emphasis plan-card pyme-card">
+                <img src="pyme.jpg" class="card-img-top" alt="Plan Mi Primer Web - Soluciones web para PYMES" style="border-radius: 8px 8px 0 0; height: 200px; object-fit: cover;">
                 <div class="card-body">
-                    <h5 class="card-title text-center text-decoration-underline">Mi Primer Web </h5>
-                    <p class="card-text text-center">Ideal para pequeñas empresas o individuos que necesitan una presencia web</p>
+                    <h3 class="card-title text-monospace-light-contrast">Mi Primer Web</h3>
+                    <p class="card-text text-monospace-light-contrast fs-6">Ideal para pequeñas empresas o individuos que necesitan una presencia web profesional</p>
+                    <!-- div class="plan-price text-center my-3">
+                        <span class="fs-4 fw-bold text-light">$299</span>
+                        <span class="text-muted">/mes</span>
+                    </div -->
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalBasico">Ver Planes</button>
-                </div>
-            </div>
-        </div>
-        <div class="col" >
-            <div class="card  h-100 rounded border-5 border-info m-3 bg-info-subtle text-info-emphasis  " >
-                <img src="empresa.jpg" class="card-img-top" alt="empresaCard">
-                <div class="card-body " >
-                    <h5 class="card-title  text-center text-decoration-underline">Web Empresa</h5>
-                    <p class="card-text text-center">Perfecto para medianas empresas que necesitan funciones adicionales</p>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalEmpresa">Ver Planes</button>
+                <div class="card-footer text-center bg-transparent border-0 pt-0">
+                    <button class="btn text-monospace-light-contrast fs-5 py-3 px-4" data-bs-toggle="modal" data-bs-target="#exampleModalBasico">Ver Plan</button>
                 </div>
             </div>
         </div>
         <div class="col">
-            <div class="card h-100 rounded border-5 border-warning m-3 bg-warning-subtle text-warning-emphasis">
-                <img src="profecional.jpg" class="card-img-top" alt="profecionalCard">
+            <div class="card h-100 rounded m-3 bg-info-subtle text-info-emphasis plan-card empresa-card">
+                <img src="empresa.jpg" class="card-img-top" alt="Plan Web Empresa - Soluciones web para empresas medianas" style="border-radius: 8px 8px 0 0; height: 200px; object-fit: cover;">
                 <div class="card-body">
-                    <h5 class="card-title text-center text-center text-decoration-underline">Web Premium</h5>
-                    <p class="card-text text-center">Diseñado para grandes empresas que requieren un sitio web avanzado</p>
+                    <h3 class="card-title text-monospace-light-contrast">Web Empresa</h3>
+                    <p class="card-text text-monospace-light-contrast fs-6">Perfecto para medianas empresas que necesitan funciones adicionales</p>
+                    <!-- div class="plan-price text-center my-3">
+                        <span class="fs-4 fw-bold text-light">$499</span>
+                        <span class="text-muted">/mes</span>
+                    </div -->
                 </div>
-                <div class="card-footer">
-                    <button class="premium btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPremium">Ver Planes</button>
+                <div class="card-footer text-center bg-transparent border-0 pt-0">
+                    <button class="btn text-monospace-light-contrast fs-5 py-3 px-4" data-bs-toggle="modal" data-bs-target="#exampleModalEmpresa">Ver Plan</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 rounded m-3 bg-warning-subtle text-warning-emphasis plan-card premium-card">
+                <img src="profecional.jpg" class="card-img-top" alt="Plan Web Premium - Soluciones web avanzadas para grandes empresas" style="border-radius: 8px 8px 0 0; height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h3 class="card-title text-monospace-light-contrast">Web Premium</h3>
+                    <p class="card-text text-monospace-light-contrast fs-6">Diseñado para grandes empresas que requieren un sitio web avanzado</p>
+                    <!-- div class="plan-price text-center my-3">
+                        <span class="fs-4 fw-bold text-light">$699</span>
+                        <span class="text-muted">/mes</span>
+                    </div -->
+                </div>
+                <div class="card-footer text-center bg-transparent border-0 pt-0">
+                    <button class="btn text-monospace-light-contrast fs-5 py-3 px-4" data-bs-toggle="modal" data-bs-target="#exampleModalPremium">Ver Plan</button>
                 </div>
             </div>
         </div>
@@ -41,30 +62,29 @@
 </section>
 
 <!-- Modal Básico -->
-<div class="modal fade " id="exampleModalBasico" tabindex="-1" aria-labelledby="exampleModalLabelBasico" aria-hidden="true">
-    <div class="modal-dialog ">
+<div class="modal fade" id="exampleModalBasico" tabindex="-1" aria-labelledby="exampleModalLabelBasico" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header bg-secondary-subtle text-secondary-emphasis ">
-                <h5 class="modal-title " id="exampleModalLabelBasico ">Mi Primer Web</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header" style="border-bottom: 2px solid #6495ED; background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <h5 class="modal-title fw-bold text-monospace-light-contrast" id="exampleModalLabelBasico">Mi Primer Web - Plan Básico</h5>
+                <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
-                <!-- Contenido del Plan Básico -->
-                <h2>Mi Primer Web</h2>
-                <h3>Descripción:</h3>
-                <p>Ideal para pequeñas empresas o individuos que necesitan una presencia web profesional y funcional que ayudará a visibilizarte en internet.</p>
-                <h3>Características::</h3>
+            <div class="modal-body" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
+                <h2 class="text-center fw-bold mb-4 text-light">Mi Primer Web</h2>
+                <h3 class="fw-bold mb-3" style="color: #6495ED;">Descripción:</h3>
+                <p class="text-monospace-light-contrast">Ideal para pequeñas empresas o individuos que necesitan una presencia web profesional y funcional que ayudará a visibilizarte en internet.</p>
+                <h3 class="fw-bold mt-4 mb-3" style="color: #6495ED;">Características:</h3>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item ">Diseño web atractivo.</li>
-                    <li class="list-group-item">Hasta 4 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto).</li>
-                    <li class="list-group-item">Dominio gratuito por un año.</li>
-                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas.</li>
-                    <li class="list-group-item">Links a redes sociales.</li>
-                    <li class="list-group-item">Botón directo a WhatsApp.</li>
-                  </ul>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Diseño web atractivo.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Hasta 4 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto).</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Dominio gratuito por un año.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Optimización SEO para posicionar tu web en las búsquedas.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Links a redes sociales.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Botón directo a WhatsApp.</li>
+                </ul>
             </div>
-            <div class="modal-footer bg-secondary-subtle text-secondary-emphasis">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="modal-footer" style="background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal">Cerrar</button>
             </div>
         </div>
     </div>
@@ -72,32 +92,31 @@
 
 <!-- Modal Empresa -->
 <div class="modal fade" id="exampleModalEmpresa" tabindex="-1" aria-labelledby="exampleModalLabelEmpresa" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header bg-info-subtle text-info-emphasis">
-                <h5 class="modal-title" id="exampleModalLabelEmpresa">Web Empresa</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header" style="border-bottom: 2px solid #6495ED; background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <h5 class="modal-title fw-bold text-monospace-light-contrast" id="exampleModalLabelEmpresa">Web Empresa - Plan Profesional</h5>
+                <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"></button>
             </div>
-                 <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
-                
-                    <h2>Web Empresa</h2>
-                     <h3>Descripción:</h3>
-                    <p>Perfecto para medianas empresas que necesitan funciones adicionales y mayor capacidad de personalización.</p>
-                    <h3>Características::</h3>
+            <div class="modal-body" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
+                <h2 class="text-center fw-bold mb-4 text-light">Web Empresa</h2>
+                <h3 class="fw-bold mb-3" style="color: #6495ED;">Descripción:</h3>
+                <p class="text-monospace-light-contrast">Perfecto para medianas empresas que necesitan funciones adicionales y mayor capacidad de personalización.</p>
+                <h3 class="fw-bold mt-4 mb-3" style="color: #6495ED;">Características:</h3>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Diseño web atractivo.</li>
-                    <li class="list-group-item">Hasta 5 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto/Fotos).</li>
-                    <li class="list-group-item">Dominio gratuito por un año.</li>
-                    <li class="list-group-item">Integración con redes sociales.</li>
-                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas.</li>
-                    <li class="list-group-item">Email.</li>
-                    <li class="list-group-item"> Galería de fotos.</li>
-                    <li class="list-group-item">Links a redes sociales.</li>
-                    <li class="list-group-item">Botón directo a WhatsApp.</li>
-                  </ul>
-                </div>
-            <div class="modal-footer bg-info-subtle text-info-emphasis">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Diseño web atractivo.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Hasta 5 secciones (ej: Inicio, Sobre Nosotros, Productos/Servicios, Contacto/Fotos).</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Dominio gratuito por un año.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Integración con redes sociales.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Optimización SEO para posicionar tu web en las búsquedas.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Email corporativo.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Galería de fotos.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Links a redes sociales.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Botón directo a WhatsApp.</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -105,42 +124,44 @@
 
 <!-- Modal Premium -->
 <div class="modal fade" id="exampleModalPremium" tabindex="-1" aria-labelledby="exampleModalLabelPremium" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header bg-warning-subtle text-warning-emphasis">
-                <h5 class="modal-title" id="exampleModalLabelPremium">Web Premium</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header" style="border-bottom: 2px solid #6495ED; background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <h5 class="modal-title fw-bold text-monospace-light-contrast" id="exampleModalLabelPremium">Web Premium - Plan Avanzado</h5>
+                <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-white text-center" style="background: linear-gradient(35deg, #2a1dde, #140a1d); min-height: 100vh;">
-                <!-- Contenido del Plan Premium -->
-                <h2>Web Premium</h2>
-                <h3>Descripción:</h3>
-                <p>Diseñado para grandes empresas que requieren un sitio web avanzado con todas las funcionalidades.</p>
-                <h3>Características::</h3>
+            <div class="modal-body" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
+                <h2 class="text-center fw-bold mb-4 text-light">Web Premium</h2>
+                <h3 class="fw-bold mb-3" style="color: #6495ED;">Descripción:</h3>
+                <p class="text-monospace-light-contrast">Diseñado para grandes empresas que requieren un sitio web avanzado con todas las funcionalidades.</p>
+                <h3 class="fw-bold mt-4 mb-3" style="color: #6495ED;">Características:</h3>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Diseño exclusivo y personalizado.</li>
-                    <li class="list-group-item">- Integración con redes sociales.</li>
-                    <li class="list-group-item">Optimización SEO para posicionar tu web en las búsquedas</li>
-                    <li class="list-group-item"> Email.</li>
-                    <li class="list-group-item">Galería de fotos.</li>
-                    <li class="list-group-item">Links a redes sociales.</li>
-                    <li class="list-group-item">Botón directo a WhatsApp y correo.</li>
-                    <li class="list-group-item">Páginas acorde a necesidades.</li>
-                    <li class="list-group-item">Opcional: Carrito de compras (MercadoPago).</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Diseño exclusivo y personalizado.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Integración con redes sociales.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Optimización SEO para posicionar tu web en las búsquedas.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Email corporativo.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Galería de fotos.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Links a redes sociales.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Botón directo a WhatsApp y correo.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Páginas acorde a necesidades.</li>
+                    <li class="list-group-item py-2" style="background-color: rgba(25, 25, 25, 0.8); color: #00FA9A; border: 1px solid rgba(100, 149, 237, 0.3); font-weight: 500; font-size: 0.9rem;">Opcional: Carrito de compras (MercadoPago).</li>
                 </ul>
             </div>
-            <div class="modal-footer bg-warning-subtle text-warning-emphasis">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="modal-footer" style="background: linear-gradient(45deg, #2a1dde, #6495ED);">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal">Cerrar</button>
             </div>
         </div>
     </div>
 </div>
 
 <style>
-  
   .gradient-text {
-    background: linear-gradient(45deg, #019952, #a49ef2);
+    background: linear-gradient(45deg, #EE82EE, #6495ED, #00FA9A); /* New color palette */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
   }
 </style>

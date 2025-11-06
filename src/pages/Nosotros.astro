@@ -1,5 +1,6 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css';
 
 
 const props = {
@@ -19,15 +20,15 @@ const props = {
 
 
 <section id="nosotros" class="container-fluid py-5 gradient-background">
-  <div class="container mt-5 pt-5">
-    <h2 class="gradient-text text-center mb-4">Nosotros</h2>
+  <div class="container mt-0 pt-3"> <!-- Reducido el espacio superior -->
+    <h2 class="gradient-text text-center mb-4 section-title">Nosotros</h2>
     <div class="row text-center justify-content-center">
       <div class="col-lg-8">
         <div class="image-container rounded-circle mx-auto">
           <img src={props.juan.image} alt="Juan Manuel Toledo" class="img-fluid grayscale rounded-circle" />
         </div>
-        <h3 class="gradient-text mt-3">{props.juan.name}</h3>
-        <p class="h5">{props.juan.description}</p>
+        <h3 class="mt-3 text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-weight: bold;">{props.juan.name}</h3> <!-- Nombre sin degradado para diferenciar de títulos de sección -->
+        <p class="h5 text-monospace-light-contrast">{props.juan.description}</p>
       </div>
       <!-- <div class="col-md-6">
         <div class="image-container rounded-circle mx-auto">
@@ -44,20 +45,35 @@ const props = {
 
 <style>
   .gradient-background {
-    background: linear-gradient(45deg, #6e65ef, #00ff88);
+    background: linear-gradient(45deg, #2a1dde, #0a0908);
+    position: relative;
+  }
+
+  /* Efecto de transición suave entre secciones */
+  .gradient-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #6495ED, transparent);
+    filter: blur(1px);
   }
 
   .gradient-text {
-    background: linear-gradient(45deg, #026135, #180cc5);
+    background: linear-gradient(45deg, #EE82EE, #6495ED, #00FA9A); /* New color palette */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 
   .image-container {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    margin: 1rem auto 1.5rem; /* Ajustado el espacio alrededor */
     overflow: hidden;
   }
 
@@ -77,8 +93,8 @@ const props = {
     filter: grayscale(0%);
   }
 
-  .container.mt-5.pt-5 {
-    margin-top: 6rem; /* Ajustado para asegurarse de que el contenido no esté demasiado cerca del navbar */
-    padding-top: 3rem;
+  .container.mt-0.pt-3 {
+    margin-top: 2rem; /* Reducido espacio superior */
+    padding-top: 1rem; /* Reducido padding superior */
   }
 </style>

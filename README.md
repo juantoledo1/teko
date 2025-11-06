@@ -1,47 +1,102 @@
-# Astro Starter Kit: Minimal
+# TekohaTech Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Descripción
+Sitio web para TekohaTech, una empresa de desarrollo web que ofrece soluciones personalizadas para pequeñas, medianas y grandes empresas.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Estructura del Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Secciones Principales
 
-## 🚀 Project Structure
+#### 1. Banner
+- Sección principal de bienvenida
+- Título principal "TekohaTech" con efecto degradado
+- Breve descripción de los servicios
+- Imagen de fondo representativa
 
-Inside of your Astro project, you'll see the following folders and files:
+#### 2. Nosotros
+- Información sobre el equipo de trabajo
+- Perfiles de Juan y Mauro con imágenes y enlaces a redes sociales
+- Descripción de roles y especialidades
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+#### 3. Servicios
+- Sección detallada de servicios ofrecidos
+- Desarrollo web personalizado
+- Tiendas online
+- Soluciones empresariales
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+#### 4. Planes
+- Tres planes de precios: PYME, Empresa y Premium
+- Cada plan con características específicas
+- Modales con información detallada
+- Diseño con paleta de colores #EE82EE #6495ED #000000 #00FA9A
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+#### 5. Contacto
+- Formulario de contacto
+- Información de contacto
+- Mapa de ubicación
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Componentes Comunes
 
-## 🧞 Commands
+#### Navbar
+- Navegación fija en la parte superior
+- Efecto de relieve en los enlaces activos
+- Icono de la empresa
+- Transiciones suaves al pasar el mouse
 
-All commands are run from the root of the project, from a terminal:
+#### Footer
+- Información de contacto
+- Derechos de autor
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Tecnologías Utilizadas
 
-## 👀 Want to learn more?
+### Framework
+- **Astro.js**: Framework moderno para sitios web estáticos
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Estilos
+- **Bootstrap 5**: Framework de CSS para diseño responsivo
+- **CSS Personalizado**: Estilos específicos para UI/UX avanzado
+
+### Tipografía
+- **Monospace**: Estilo de fuente consistente en todas las secciones
+- Efecto `text-monospace-light-contrast` para mejor legibilidad
+
+## Paleta de Colores
+- **Lavanda**: `#EE82EE`
+- **Azul aciano**: `#6495ED`
+- **Negro**: `#000000`
+- **Verde primavera medio**: `#00FA9A`
+
+## Funcionalidades
+
+### Planes Interactivos
+- Modales con información detallada de cada plan
+- Efectos hover mejorados
+- Diseño responsive para todos los dispositivos
+
+### Navegación
+- Enlaces anclajes a secciones
+- Barra de navegación fija
+- Indicador visual de sección activa
+
+### UI/UX Avanzado
+- Efectos degradados
+- Transiciones suaves
+- Animaciones en hover
+- Diseño responsive
+
+## Archivos Importantes
+
+- `src/pages/index.astro`: Página principal
+- `src/pages/Planes.astro`: Sección de planes de precios
+- `src/Components/`: Componentes reutilizables
+- `src/styles/`: Archivos CSS personalizados
+
+## Instalación y Ejecución
+
+1. Clonar el repositorio
+2. Ejecutar `npm install`
+3. Ejecutar `npm run dev` para iniciar el servidor de desarrollo
+
+## Contribuciones
+
+El proyecto está configurado para permitir contribuciones siguiendo las mejores prácticas de desarrollo web moderno.

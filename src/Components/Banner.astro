@@ -1,12 +1,13 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css';
 
 ---
 <section>
-  <div class="banner d-flex justify-content-center align-items-center container-fluid" style="background: linear-gradient(25deg, #0a0908, #140a1d, #2a1dde); min-height: 100vh;">
+  <div class="banner d-flex justify-content-center align-items-center container-fluid" style="background: linear-gradient(25deg, #0a0908, #140a1d, #2a1dde); min-height: 80vh;">
     <div class="col-12 text-center">
-      <h1 class="gradient-text mt-5 mb-5">TekohaTech</h1>
-      <p class="h5 text-light mt-3 font-monospace mx-auto px-3 px-md-5" style="max-width: 900px;">
+      <h1 class="gradient-text mt-4 mb-4 section-title">TekohaTech</h1>
+      <p class="h5 text-monospace-light-contrast mt-2 mx-auto px-3 px-md-5" style="max-width: 900px;">
         "Bienvenido! Tekoha significa 'pueblo' o 'comunidad' en guaraní, reflejando nuestro compromiso de ofrecerte servicios de diseño y desarrollo web que te ayuden a destacar en línea. Lleva tu presencia en la web al siguiente nivel con nosotros."
       </p>
     </div>
@@ -14,8 +15,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 </section>
 <style>
   .gradient-text {
-    background: linear-gradient(45deg, #00ff88, #1f11eb);
+    background: linear-gradient(45deg, #EE82EE, #6495ED, #00FA9A); /* New color palette */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 </style>

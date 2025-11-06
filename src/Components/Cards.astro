@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 // Valores de ejemplo para la primera tarjeta, que podrían venir de una API en el futuro.
 const firstCardInfo = {
   title: 'Paliachi',
@@ -28,17 +30,17 @@ const thirdCardInfo = {
 ---
 
 <section class="portfolio-section">
-  <h2 class="gradient-text text-center mb-4">Trabajos Realizados</h2>
+  <h2 class="gradient-text text-center section-title mb-4">Trabajos Realizados</h2>
   <div class="container">
     <div class="row d-flex justify-content-center">
       <!-- Primera tarjeta con datos externos -->
             <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
               <div class="card">
                 <img src={firstCardInfo.image} alt={firstCardInfo.title} />
-                <h3>{firstCardInfo.title}</h3>
+                <h3 class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{firstCardInfo.title}</h3>
                 <!-- Botón con enlace al sitio externo -->
-                <a href={firstCardInfo.link} target="_blank" class="card-button-link">
-                  <button>{firstCardInfo.buttonText}</button>
+                <a href={firstCardInfo.link} target="_blank" class="card-button-link text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">
+                  <button class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{firstCardInfo.buttonText}</button>
                 </a>
               </div>
             <!-- </div> -->
@@ -57,10 +59,10 @@ const thirdCardInfo = {
              <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
               <div class="card">
                 <img src={thirdCardInfo.image} alt={thirdCardInfo.title} />
-                <h3>{thirdCardInfo.title}</h3>
+                <h3 class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{thirdCardInfo.title}</h3>
                 <!-- Botón con enlace al sitio externo -->
-                <a href={thirdCardInfo.link} target="_blank" class="card-button-link">
-                  <button>{thirdCardInfo.buttonText}</button>
+                <a href={thirdCardInfo.link} target="_blank" class="card-button-link text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">
+                  <button class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{thirdCardInfo.buttonText}</button>
                 </a>
               </div>
             </div>   
@@ -70,14 +72,29 @@ const thirdCardInfo = {
 
 <style>
 .gradient-text {
-    background: linear-gradient(45deg, #026135, #180cc5);
+    background: linear-gradient(45deg, #EE82EE, #6495ED, #00FA9A); /* New color palette */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .portfolio-section {
     padding: 32px 16px;
-    background: linear-gradient(45deg, #00ff88, #1f11eb);
+    background: linear-gradient(135deg, #2a1dde, #0a0908); /* Usando colores de la paleta */
+    position: relative;
+}
+
+/* Efecto de transición suave entre secciones */
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #6495ED, transparent);
+    filter: blur(1px);
 }
 
 .card {
@@ -119,7 +136,7 @@ const thirdCardInfo = {
 
 .card button {
     margin-top: 8px;
-    background-color: #007bff;
+    background-color: #6495ED; /* Usando color de la paleta */
     color: white;
     border: none;
     padding: 8px 16px;
@@ -129,6 +146,6 @@ const thirdCardInfo = {
 }
 
 .card button:hover {
-    background-color: #0056b3;
+    background-color: #4a7bb8;
 }
 </style>

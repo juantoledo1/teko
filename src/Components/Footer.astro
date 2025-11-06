@@ -1,6 +1,7 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../styles/global.css';
 ---
 
 <section class="ezy__copyright1 light">
@@ -8,31 +9,24 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
     <div class="container">
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-lg-4">
-          <p class="text-white mb-lg-0">Copyright all rights reserved Tekoha</p>
+          <p class="text-white mb-lg-0 text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">Copyright all rights reserved Tekoha</p>
         </div>
-        <div class="col-lg-4">
-          <ul class="ezy__copyright1-nav nav justify-content-center">
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Inicio</a> -->
-            </li>
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Planes</a> -->
-            </li>
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Contacto</a> -->
-            </li>
-          </ul>
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+          <!-- Logo en el centro -->
+          <div class="footer-logo">
+            <img src="/LogoTekoha.png" alt="TekohaTech Logo" width="50" height="50" class="d-inline-block align-top">
+          </div>
         </div>
         <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
           <ul class="ezy__copyright1-social nav">
             <li>
-              <a href="#" class=""><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#" class=""><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="#" class=""><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-instagram"></i></a>
             </li>
           </ul>
         </div>
@@ -75,5 +69,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
   .ezy__copyright1-social li a:hover {
     opacity: .8;
+  }
+  
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
