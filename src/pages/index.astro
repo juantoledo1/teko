@@ -3,14 +3,13 @@ import Banner from "../Components/Banner.astro"
 import Navbar from "../Components/Navbar.astro"
 import Cards from "../Components/Cards.astro"
 import Footer from "../Components/Footer.astro"
-import Servicios  from "./Servicios.astro"
-import Planes from "./Planes.astro"
-import Contacto from "./Contacto.astro"
- 
-
+import Servicios  from "../Components/Servicios.astro"
+import Planes from "../Components/Planes.astro"
+import Contacto from "../Components/Contacto.astro"
+import Procesos from "../Components/Procesos.astro"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nosotros from "./Nosotros.astro"
+import Nosotros from "../Components/Nosotros.astro"
 import '../styles/global.css';
 
 
@@ -20,7 +19,7 @@ import '../styles/global.css';
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="TekohaTech ofrece soluciones web profesionales: landing pages, sistemas web, ecommerce, diseño web a medida, SEO, y mantenimiento web. Desarrollo web responsive y personalizado para PYMES y empresas.">
+		<meta name="description" content="TekohaTech ofrece soluciones web profesionales: landing pages, sistemas web, ecommerce, diseño web a medida, SEO, y mantenimiento web. Desarrollo web responsive y personalizado para PYMES y empresas." />
 		<meta name="keywords" content="desarrollo web, landing page, sistema web, ecommerce, diseño web, seo, web responsive, desarrollo a medida, pyme, empresa, programación, frontend, backend, full stack, web design, soluciones digitales, marketing digital, desarrollo software, aplicaciones web, desarrollo web argentina, web solutions, website development, custom websites, business websites, online presence, digital transformation" />
 		<meta name="author" content="TekohaTech" />
 		<meta name="robots" content="index, follow" />
@@ -30,8 +29,8 @@ import '../styles/global.css';
 		<meta name="rating" content="general" />
 		<meta name="geo.region" content="AR" />
 		<meta name="geo.country" content="AR" />
-		<meta name="theme-color" content="#2a1dde" />
-		
+		<meta name="theme-color" content="#1a237e" />
+
 		<!-- Meta tags para redes sociales -->
 		<meta property="og:title" content="TekohaTech - Soluciones Web Profesionales | Landing Pages, Sistemas Web y Desarrollo a Medida" />
 		<meta property="og:description" content="Especialistas en desarrollo web: landing pages, sistemas web, ecommerce y diseño personalizado para PYMES y empresas. Soluciones digitales a medida para impulsar tu negocio." />
@@ -43,15 +42,21 @@ import '../styles/global.css';
 		<meta name="twitter:title" content="TekohaTech - Soluciones Web Profesionales" />
 		<meta name="twitter:description" content="Especialistas en desarrollo web: landing pages, sistemas web, ecommerce y diseño personalizado." />
 		<meta name="twitter:image" content="https://www.tekohatech.com/LogoTekoha.png" />
-		
+
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.tekohatech.com" />
-		
+
 		<link rel="icon" type="image/svg+xml" href="/LogoTekohaIco.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>TekohaTech - Desarrollo Web Profesional | Soluciones Digitales para PYMES y Empresas</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/src/styles/planes.css" rel="stylesheet">
+
+		<!-- Precarga recursos críticos -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"></noscript>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	</head>
 	<body>
 		<Navbar/>
@@ -59,10 +64,12 @@ import '../styles/global.css';
 		<Nosotros/>
 		<Cards/>
 		<Servicios/>
-		<Planes/>	
+		<Procesos/>
+		<Planes/>
 		<Contacto/>
-		<Footer/>	
+		<Footer/>
+
+		<!-- Carga diferida de scripts no críticos -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 	</body>
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -1,65 +1,61 @@
 /* Estilos globales para tipografía consistente */
 
-/* Fuente monoespaciada para párrafos y texto general */
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Fuente principal para párrafos y texto general */
 body, p, span, a, li, .card-text {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   scroll-behavior: smooth; /* Hacer que el scroll sea suave */
 }
 
 /* Estilos para texto normal */
-.text-monospace-light {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+.text-light {
   color: #ffffff; /* Texto blanco para mejor contraste */
 }
 
 /* Estilos para texto con mejor contraste en diferentes fondos */
-.text-monospace-light-contrast {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+.text-light-contrast {
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Estilos para texto oscuro en fondos claros */
-.text-monospace-dark {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+.text-dark {
   color: #212529;
 }
 
 /* Estilos para texto destacado */
-.text-monospace-bold {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+.text-bold {
   font-weight: bold;
   color: #ffffff;
 }
 
-/* Estilo para enlaces */
-a.nav-link,
-a.text-light,
-a.card-button-link {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif !important;
+/* Estilo para código y elementos técnicos */
+code, .code-text {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
 }
 
 /* Títulos con estilos más consistentes */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color: #ffffff;
+  font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Estilo específico para títulos de secciones */
 .section-title {
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   position: relative;
   display: block;
   padding: 0.3rem 1rem;
-  margin-top: 1rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Añadir efecto de borde resaltado a títulos de sección */
@@ -84,56 +80,36 @@ img {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.8rem; /* Aumentado para mejor visibilidad */
-    margin-top: 0.5rem !important;
-    margin-bottom: 1rem !important;
-    text-align: center;
-    display: block;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
   
-  h1 {
-    font-size: 2.2rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.7rem;
-  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.7rem; }
   
   .card-body {
     padding: 15px;
   }
   
   .p-5 {
-    padding: 2rem 1rem !important;
+    padding: 2rem 1rem;
   }
   
   .m-3 {
-    margin: 0.75rem !important;
+    margin: 0.75rem;
   }
 }
 
 @media (max-width: 576px) {
   .section-title {
-    font-size: 1.6rem; /* Aumentado para mejor visibilidad */
-    text-align: center;
-    display: block;
+    font-size: 1.6rem;
   }
   
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.5rem; }
   
   .text-monospace-light-contrast {
     font-size: 0.9rem;
@@ -148,21 +124,11 @@ img {
 /* Ajustes para pantallas muy pequeñas */
 @media (max-width: 400px) {
   .section-title {
-    font-size: 1.4rem; /* Aumentado para mejor visibilidad */
-    padding: 0.2rem 0.5rem;
-    text-align: center;
-    display: block;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  h2 {
-    font-size: 1.6rem;
-  }
-  
-  h3 {
     font-size: 1.4rem;
+    padding: 0.2rem 0.5rem;
   }
+  
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.4rem; }
 }

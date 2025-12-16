@@ -1,0 +1,346 @@
+---
+// Data for the pricing plans, adjusted for local SMEs in Posadas.
+// Prices updated to USD (U$S).
+const plans = [
+  {
+    type: 'pyme',
+    title: 'Mi Primer Web',
+    price: 'U$S 299',
+    period: 'único',
+    description: 'Landing Page Estática',
+    features: [
+      'Diseño moderno y adaptativo',
+      'Hasta 4 secciones (Inicio, Servicios, etc.)',
+      'Optimización básica para buscadores (SEO)',
+      'Formulario de contacto',
+      'Links a redes sociales',
+      'Botón directo a WhatsApp',
+      'Soporte inicial: 30 días'
+    ],
+    buttonText: 'Consultar Ahora',
+    buttonIcon: 'fa-paper-plane',
+    featured: false,
+    iconColor: '#4fc3f7'
+  },
+  {
+    type: 'empresa',
+    title: 'Web Empresa',
+    price: 'U$S 499',
+    period: 'único',
+    description: 'Sitio autoadministrable con WordPress',
+    features: [
+      'Panel para gestionar contenido (WordPress)',
+      'Hasta 6 secciones + Blog',
+      'Diseño premium personalizado',
+      'Optimización SEO Avanzada',
+      'Galería de fotos y videos',
+      'Integración con redes sociales',
+      'Soporte extendido: 60 días',
+      'Mantenimiento mensual (opcional): U$S 29'
+    ],
+    buttonText: '¡Elige este Plan!',
+    buttonIcon: 'fa-bolt',
+    featured: true,
+    iconColor: '#00e676'
+  },
+  {
+    type: 'premium',
+    title: 'Web Premium',
+    price: 'U$S 699',
+    period: 'único',
+    description: 'E-Commerce con WordPress',
+    features: [
+      'Tienda online completa (WooCommerce)',
+      'Carga inicial de hasta 20 productos',
+      'Integración con Mercado Pago',
+      'Optimización SEO para E-commerce',
+      'Carrito de compras y gestión de pedidos',
+      'Diseño 100% orientado a la venta',
+      'Soporte prioritario: 120 días',
+      'Mantenimiento mensual (opcional): U$S 49'
+    ],
+    buttonText: 'Vender Online',
+    buttonIcon: 'fa-star',
+    featured: false,
+    iconColor: '#ff4081'
+  }
+];
+---
+
+<section id="planes" class="pricing-section py-5">
+  <div class="container">
+    <h2 class="text-center gradient-text mb-5 section-title">Nuestros Planes de Desarrollo Web</h2>
+    <p class="text-center text-light-contrast mb-5">Soluciones a medida para emprendedores y PYMEs en Posadas, Misiones.</p>
+
+    <div class="row g-4 justify-content-center">
+      {plans.map(plan => (
+        <div class="col-lg-4 col-md-6" style="overflow: visible;"> {/* Allow icon to overflow */}
+          <div class={`pricing-card h-100 position-relative ${plan.type}-plan ${plan.featured ? 'featured-card' : ''}`} role="region" aria-labelledby={`plan-${plan.type}-title`}>
+            
+            <div class="plan-icon text-center mb-4">
+              <i class={`fas ${plan.buttonIcon} fa-3x`} style={{color: plan.iconColor}}></i>
+            </div>
+
+            <div class="card-header text-center py-4">
+              {plan.featured && (
+                <div class="badge-featured position-absolute top-0 start-50 translate-middle bg-warning text-dark px-3 py-1 rounded-pill">
+                  <small class="font-weight-bold">MÁS POPULAR</small>
+                </div>
+              )}
+              <h3 id={`plan-${plan.type}-title`} class="plan-name text-light mb-2">{plan.title}</h3>
+              <div class="plan-price mb-2">
+                <span class="price-amount text-success">{plan.price}</span>
+                <span class="text-light-contrast">/{plan.period}</span>
+              </div>
+              <p class="plan-description text-light-contrast">{plan.description}</p>
+            </div>
+
+            <div class="card-body">
+              <ul class="list-unstyled feature-list">
+                {plan.features.map(feature => (
+                  <li class="feature-item d-flex align-items-center mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    <span class="text-light">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="card-footer text-center border-0 bg-transparent">
+              <a href="#contacto" class={`btn ${plan.featured ? 'btn-primary' : 'btn-outline-light'} w-100`} aria-label={`Seleccionar plan ${plan.title} para contactar con TekohaTech`}>
+                <i class={`fas ${plan.buttonIcon} me-2`}></i>
+                {plan.buttonText}
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-5">
+        <h3 class="text-center gradient-text mb-4 section-title">Requisitos Adicionales</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="requirements-card">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="requirement-item">
+                                <h5 class="text-light">Dominio Propio (.com, .com.ar)</h5>
+                                <p class="text-light-contrast">El cliente debe registrar y ser propietario de su dominio. Podemos asesorarte en el proceso.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="requirement-item">
+                                <h5 class="text-light">Alojamiento Web (Hosting)</h5>
+                                <p class="text-light-contrast">Necesario para sitios con WordPress. Te recomendamos proveedores de confianza según tu plan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-section {
+    background: linear-gradient(45deg, #0a0908, #1a237e);
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    /* overflow: hidden; --- This was cutting off the icon, so it's removed. */
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; /* Prevents overflow */
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .card-header {
+    border: none;
+    background: transparent;
+    padding-top: 2rem;
+  }
+
+  .plan-icon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a237e;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .plan-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .plan-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  .price-amount {
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+
+  .plan-description {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+
+  .card-body {
+    flex-grow: 1; /* Ensures the body takes up available space */
+  }
+  
+  .feature-list {
+    padding: 1.5rem 0;
+  }
+
+  .feature-item {
+    animation: fadeInUp 0.4s ease forwards;
+  }
+
+  .card-footer {
+      margin-top: auto; /* Pushes footer to the bottom */
+  }
+
+  .btn-outline-light {
+    border-color: #4fc3f7;
+    color: #4fc3f7;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #4fc3f7;
+    color: #1a237e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(79, 195, 247, 0.4);
+  }
+
+  .btn-primary {
+    background: linear-gradient(45deg, #00e676, #4fc3f7);
+    border: none;
+    color: #1a237e;
+    font-weight: 700;
+    padding: 14px 35px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(45deg, #00c853, #2196f3);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 230, 118, 0.6);
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #4fc3f7, #2196f3, #00e676);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .featured-card {
+    border: 2px solid #00e676;
+    transform: scale(1.05);
+    z-index: 10;
+    background: rgba(26, 35, 126, 0.15);
+  }
+
+  .featured-card:hover {
+    transform: scale(1.05) translateY(-15px);
+  }
+
+  .badge-featured {
+    font-size: 0.8rem;
+    font-weight: 800;
+    z-index: 100;
+    letter-spacing: 0.5px;
+  }
+  
+  .requirements-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .requirement-item {
+    padding: 20px;
+    background: rgba(26, 35, 126, 0.2);
+    border-radius: 12px;
+    border-left: 4px solid #4fc3f7;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .requirement-item:hover {
+    transform: translateY(-5px);
+    background: rgba(26, 35, 126, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 991.98px) {
+    .featured-card {
+      transform: scale(1);
+    }
+  }
+
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 767.98px) {
+    .pricing-card {
+        padding: 20px 15px;
+    }
+    .plan-name {
+        font-size: 1.4rem;
+    }
+    .plan-price {
+        font-size: 1.8rem;
+    }
+    .price-amount {
+        font-size: 2.2rem;
+    }
+    .feature-list {
+        padding: 1rem 0;
+    }
+    .feature-item span {
+        font-size: 0.9rem;
+    }
+  }
+</style>

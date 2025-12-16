@@ -1,91 +1,93 @@
 ---
 import '../styles/global.css';
 
-// Valores de ejemplo para la primera tarjeta, que podrían venir de una API en el futuro.
-const firstCardInfo = {
-  title: 'Paliachi',
-  image: '/Paliachi.webp',  // URL de la imagen de la web externa
-  link: 'https://paliachi.com/',                     // URL de redirección al sitio externo
-  buttonText: 'Ver más'
-};
-
-const secondCardInfo = {
-  title: 'Giorno Pizzas',
-  image: '/giorno.webp',  // URL de la imagen de la web externa
-  link: 'https://giornopizzas.free.nf/',                     // URL de redirección al sitio externo
-  buttonText: 'Ver más'
-};
-
-const thirdCardInfo = {
-  title: 'Betelgeuse',
-  image: '/betell.png',  // URL de la imagen de la web externa
-  link: 'https://betelgeusee.netlify.app/',                     // URL de redirección al sitio externo
-  buttonText: 'Ver más'
-};
-
-
-
-// Datos por defecto para las demás tarjetas.
-// const { title = 'Tekoha', image = '/LogoTekoha.png', buttonText = 'Ver más' } = Astro.props;
+// An array to hold all the portfolio card data for easier management.
+const cards = [
+  {
+    title: 'Paliachi',
+    image: '/Paliachi.webp',
+    link: 'https://paliachi.com/',
+    buttonText: 'Ver más'
+  },
+  {
+    title: 'Giorno Pizzas',
+    image: '/giorno.webp',
+    link: 'https://giornopizzas.free.nf/',
+    buttonText: 'Ver más'
+  },
+  {
+    title: 'Betelgeuse',
+    image: '/betell.png',
+    link: 'https://betelgeusee.netlify.app/',
+    buttonText: 'Ver más'
+  },
+  {
+    title: 'Invitaciones Digitales',
+    image: '/invi-teko.jpg', // The new image provided by the user
+    link: 'https://invi-cumple2.netlify.app/',
+    buttonText: 'Ver ejemplo'
+  }
+];
 ---
 
 <section class="portfolio-section">
-  <h2 class="gradient-text text-center section-title mb-4">Trabajos Realizados</h2>
+  <h2 class="gradient-text text-center section-title mb-4">Nuestro Portafolio</h2>
   <div class="container">
     <div class="row d-flex justify-content-center">
-      <!-- Primera tarjeta con datos externos -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="card">
-                <img src={firstCardInfo.image} alt={firstCardInfo.title} />
-                <h3 class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{firstCardInfo.title}</h3>
-                <!-- Botón con enlace al sitio externo -->
-                <a href={firstCardInfo.link} target="_blank" class="card-button-link text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">
-                  <button class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{firstCardInfo.buttonText}</button>
-                </a>
-              </div>
-            <!-- </div> -->
-            <!-- Segunda tarjeta con datos externos -->
-            <!-- <div class="col-12 col-md-6 col-lg-4 mb-4">
-              <div class="card">
-                <img src={secondCardInfo.image} alt={secondCardInfo.title} />
-                <h3>{secondCardInfo.title}</h3> -->
-                <!-- Botón con enlace al sitio externo -->
-                <!-- <a href={secondCardInfo.link} target="_blank" class="card-button-link">
-                  <button>{secondCardInfo.buttonText}</button>
-                </a>
-              </div> -->
+      {cards.map(card => (
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+          <div class="card" role="article" aria-label={`Tarjeta del proyecto ${card.title}`}>
+            <img
+              src={card.image}
+              alt={`Imagen del proyecto ${card.title}`}
+              loading="lazy"
+              width="300"
+              height="200"
+              class="card-img-top"
+              decoding="async"
+            />
+            <h3 class="text-light" style="font-family: 'Inter', sans-serif;">{card.title}</h3>
+            <a
+              href={card.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-button-link text-light"
+              style="font-family: 'Inter', sans-serif;"
+              aria-label={`Visitar el sitio web de ${card.title}`}
+            >
+              <button
+                class="text-light"
+                style="font-family: 'Inter', sans-serif;"
+                aria-describedby={`description-${card.title.replace(/\s+/g, '-').toLowerCase()}`}
+              >
+                {card.buttonText}
+              </button>
+            </a>
+            <div id={`description-${card.title.replace(/\s+/g, '-').toLowerCase()}`} class="visually-hidden">
+              Enlace externo al sitio web de {card.title}
             </div>
-             <!-- Segunda tarjeta con datos externos -->
-             <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="card">
-                <img src={thirdCardInfo.image} alt={thirdCardInfo.title} />
-                <h3 class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{thirdCardInfo.title}</h3>
-                <!-- Botón con enlace al sitio externo -->
-                <a href={thirdCardInfo.link} target="_blank" class="card-button-link text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">
-                  <button class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">{thirdCardInfo.buttonText}</button>
-                </a>
-              </div>
-            </div>   
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
 
 <style>
 .gradient-text {
-    background: linear-gradient(45deg, #EE82EE, #6495ED, #00FA9A); /* New color palette */
+    background: linear-gradient(45deg, #4fc3f7, #2196f3, #00e676);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;
+    font-family: 'Inter', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .portfolio-section {
     padding: 32px 16px;
-    background: linear-gradient(135deg, #2a1dde, #0a0908); /* Usando colores de la paleta */
+    background: linear-gradient(135deg, #1a237e, #0a0908);
     position: relative;
 }
 
-/* Efecto de transición suave entre secciones */
 .portfolio-section::before {
     content: '';
     position: absolute;
@@ -93,27 +95,47 @@ const thirdCardInfo = {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #6495ED, transparent);
+    background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
     filter: blur(1px);
 }
 
 .card {
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.08);
     transition: transform 0.2s;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4fc3f7, #00e676);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
-    background-color: #1063bb;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
 }
 
 .card img {
@@ -121,10 +143,11 @@ const thirdCardInfo = {
     height: auto;
     max-height: 200px;
     object-fit: cover;
+    border-radius: 8px; /* Rounded corners for the image */
 }
 
 .card h3 {
-    margin-bottom: 8px;
+    margin: 16px 0 8px; /* Adjusted margin */
     text-align: center;
 }
 
@@ -132,20 +155,25 @@ const thirdCardInfo = {
     display: flex;
     justify-content: center;
     width: 100%;
+    text-decoration: none; /* Remove underline from link */
 }
 
 .card button {
     margin-top: 8px;
-    background-color: #6495ED; /* Usando color de la paleta */
-    color: white;
+    background-color: #4fc3f7;
+    color: #1a237e;
     border: none;
     padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border-radius: 50px;
+    transition: all 0.3s ease;
     cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 .card button:hover {
-    background-color: #4a7bb8;
+    background-color: #2196f3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(79, 195, 247, 0.3);
 }
 </style>

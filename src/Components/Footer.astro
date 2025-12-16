@@ -4,76 +4,222 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../styles/global.css';
 ---
 
-<section class="ezy__copyright1 light">
-  <div class="text-center text-lg-start">
-    <div class="container">
-      <div class="row d-flex justify-content-between align-items-center">
-        <div class="col-lg-4">
-          <p class="text-white mb-lg-0 text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;">Copyright all rights reserved Tekoha</p>
-        </div>
-        <div class="col-lg-4 d-flex justify-content-center align-items-center">
-          <!-- Logo en el centro -->
-          <div class="footer-logo">
-            <img src="/LogoTekoha.png" alt="TekohaTech Logo" width="50" height="50" class="d-inline-block align-top">
+<footer class="footer-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-widget">
+          <h4 class="footer-title text-light mb-4">TekohaTech</h4>
+          <p class="text-light-contrast">Especialistas en desarrollo web para PYMES y empresas. Creamos soluciones digitales que impulsan tu negocio en línea.</p>
+          <div class="footer-logo mt-4">
+            <img src="/LogoTekoha.png" alt="TekohaTech Logo" width="60" height="60" class="d-inline-block">
           </div>
         </div>
-        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
-          <ul class="ezy__copyright1-social nav">
-            <li>
-              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-widget">
+          <h4 class="footer-title text-light mb-4">Enlaces</h4>
+          <ul class="footer-links">
+            <li><a href="#nosotros" class="text-light-contrast">Nosotros</a></li>
+            <li><a href="#servicios" class="text-light-contrast">Servicios</a></li>
+            <li><a href="#procesos" class="text-light-contrast">Procesos</a></li>
+            <li><a href="#planes" class="text-light-contrast">Planes</a></li>
+            <li><a href="#contacto" class="text-light-contrast">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h4 class="footer-title text-light mb-4">Contacto</h4>
+          <ul class="footer-contact">
+            <li class="d-flex align-items-center mb-2">
+              <i class="fas fa-envelope me-3" style="color: #4fc3f7;"></i>
+              <span class="text-light-contrast">tekohatech@gmail.com</span>
             </li>
-            <li>
-              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-linkedin"></i></a>
+            <li class="d-flex align-items-center mb-2">
+              <i class="fas fa-map-marker-alt me-3" style="color: #00e676;"></i>
+              <span class="text-light-contrast">Misiones, Argentina</span>
             </li>
-            <li>
-              <a href="#" class="text-monospace-light-contrast" style="font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace, sans-serif;"><i class="fab fa-instagram"></i></a>
+            <li class="d-flex align-items-center">
+              <i class="fas fa-clock me-3" style="color: #4fc3f7;"></i>
+              <span class="text-light-contrast">Lun-Vie: 9:00 - 18:00</span>
             </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h4 class="footer-title text-light mb-4">Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon me-3">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon me-3">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon me-3">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <div class="mt-4">
+            <h5 class="text-light mb-3">Métodos de Pago</h5>
+            <div class="payment-methods">
+              <i class="fab fa-cc-visa fa-2x me-2 text-light-contrast"></i>
+              <i class="fab fa-cc-mastercard fa-2x me-2 text-light-contrast"></i>
+              <i class="fab fa-cc-amex fa-2x text-light-contrast"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-light-contrast mb-md-0 mb-3">Copyright © 2025 TekohaTech. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="footer-bottom-links d-flex justify-content-md-end">
+            <li class="me-4"><a href="#" class="text-light-contrast">Política de Privacidad</a></li>
+            <li><a href="#" class="text-light-contrast">Términos y Condiciones</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-</section>
+</footer>
 
 <style>
-  .ezy__copyright1 {
-    --ezy-theme-color: #2a1dde;
-    --ezy-theme-color-rgb: 13, 110, 253;
-
-    background-color: var(--ezy-theme-color);
+  .footer-section {
+    background: linear-gradient(135deg, #0a0908, #1a237e);
+    padding: 50px 0 20px;
     color: #ffffff;
   }
 
-  .ezy__copyright1 > div {
-    background-color: var(--ezy-theme-color);
-    padding: 48px 0;
+  .footer-widget h4 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
   }
 
-  .ezy__copyright1-nav .nav-link {
-    color: #fff;
+  .footer-widget h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3f7, #00e676);
   }
 
-  .ezy__copyright1-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.8);
+  .footer-links {
+    list-style: none;
+    padding: 0;
   }
 
-  .ezy__copyright1-social li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 6px 8px;
+  .footer-links li {
+    margin-bottom: 10px;
   }
 
-  .ezy__copyright1-social li a {
-    color: #fff;
+  .footer-links li a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s ease;
   }
 
-  .ezy__copyright1-social li a:hover {
-    opacity: .8;
+  .footer-links li a:hover {
+    color: #4fc3f7;
   }
-  
-  .footer-logo {
+
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+  }
+
+  .social-icons {
     display: flex;
-    justify-content: center;
+  }
+
+  .social-icon {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-icon:hover {
+    background: #4fc3f7;
+    color: #1a237e;
+    transform: translateY(-3px);
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    color: #cccccc;
+  }
+
+  .footer-bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-bottom-links li {
+    display: inline-block;
+  }
+
+  .footer-bottom-links a {
+    text-decoration: none;
+    color: #cccccc;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom-links a:hover {
+    color: #4fc3f7;
+  }
+
+  .footer-logo img {
+    transition: transform 0.3s ease;
+  }
+
+  .footer-logo img:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .footer-widget {
+      margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+
+    .footer-bottom-links {
+      justify-content: center;
+    }
+
+    .footer-bottom-links a {
+      margin: 0 10px;
+    }
   }
 </style>
