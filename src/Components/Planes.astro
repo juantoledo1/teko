@@ -85,7 +85,7 @@ const plans = [
                   <small class="font-weight-bold">MÁS POPULAR</small>
                 </div>
               )}
-              <h3 id={`plan-${plan.type}-title`} class="plan-name text-light mb-2">{plan.title}</h3>
+              <h3 id={`plan-${plan.type}-title`} class="plan-name gradient-text mb-2">{plan.title}</h3>
               <div class="plan-price mb-2">
                 <span class="price-amount text-success">{plan.price}</span>
                 <span class="text-light-contrast">/{plan.period}</span>
@@ -123,13 +123,13 @@ const plans = [
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="requirement-item">
-                                <h5 class="text-light">Dominio Propio (.com, .com.ar)</h5>
+                                <h5 class="gradient-text">Dominio Propio (.com, .com.ar)</h5>
                                 <p class="text-light-contrast">El cliente debe registrar y ser propietario de su dominio. Podemos asesorarte en el proceso.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="requirement-item">
-                                <h5 class="text-light">Alojamiento Web (Hosting)</h5>
+                                <h5 class="gradient-text">Alojamiento Web (Hosting)</h5>
                                 <p class="text-light-contrast">Necesario para sitios con WordPress. Te recomendamos proveedores de confianza según tu plan.</p>
                             </div>
                         </div>
@@ -261,16 +261,6 @@ const plans = [
     color: #ffffff;
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(0, 230, 118, 0.6);
-  }
-
-  .gradient-text {
-    background: linear-gradient(45deg, #4fc3f7, #2196f3, #00e676);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Inter', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 2.5rem;
-    font-weight: 800;
   }
 
   .featured-card {

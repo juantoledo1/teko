@@ -42,9 +42,14 @@ code, .code-text {
 /* Títulos con estilos más consistentes */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  color: #ffffff;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #4fc3f7, #2196f3, #00e676); /* New color palette */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Estilo específico para títulos de secciones */
@@ -67,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, #EE82EE, #6495ED, #00FA9A);
+  background: linear-gradient(90deg, #4fc3f7, #2196f3, #00e676);
   border-radius: 2px;
 }
 
