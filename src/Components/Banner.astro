@@ -4,9 +4,15 @@ import '../styles/global.css';
 
 ---
 <section class="fade-in-up">
-  <div class="banner d-flex justify-content-center align-items-center container-fluid" style="background: linear-gradient(135deg, #ecf0f1, #ffffff, #3498db); min-height: 80vh; position: relative; color: #2c3e50;">
+  <div class="banner d-flex justify-content-center align-items-center container-fluid position-relative" style="min-height: 80vh; color: #2c3e50;">
+    <!-- Particles Background -->
+    <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;"></div>
+    
+    <!-- Gradient overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(236, 240, 241, 0.9), rgba(255, 255, 255, 0.9), rgba(52, 152, 219, 0.9)); z-index: 2;"></div>
+    
     <!-- Animated background elements -->
-    <div class="code-background">
+    <div class="code-background" style="z-index: 3;">
       <div class="code-line">{'{'}</div>
       <div class="code-line">{'  '}<span class="code-keyword">"nombre"</span>: <span class="code-string">"TekohaTech"</span>,</div>
       <div class="code-line">{'  '}<span class="code-keyword">"especialidad"</span>: <span class="code-string">"Soluciones Web"</span>,</div>
@@ -14,7 +20,7 @@ import '../styles/global.css';
       <div class="code-line">{'}'}</div>
     </div>
 
-    <div class="col-12 text-center banner-content">
+    <div class="col-12 text-center banner-content" style="z-index: 4;">
       <h1 class="gradient-text mt-4 mb-4 section-title">TekohaTech</h1>
       <p class="h5 text-dark mt-2 mx-auto px-3 px-md-5" style="max-width: 900px; color: #2c3e50 !important;">
         "Bienvenido! Tekoha significa 'pueblo' o 'comunidad' en guaraní, reflejando nuestro compromiso de ofrecerte servicios de diseño y desarrollo web que te ayuden a destacar en línea. Lleva tu presencia en la web al siguiente nivel con nosotros."
@@ -106,3 +112,98 @@ import '../styles/global.css';
     box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
   }
 </style>
+
+<script>
+  // Initialize particles.js
+  document.addEventListener('DOMContentLoaded', function() {
+    // Load particles.js from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js';
+    script.onload = function() {
+      // Initialize particles
+      tsParticles.load('particles-js', {
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: 40,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: ['#3498db', '#1abc9c', '#2c3e50']
+          },
+          shape: {
+            type: 'circle',
+            stroke: {
+              width: 0,
+              color: '#000000'
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+            attract: {
+              enable: true,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'grab'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    };
+    document.head.appendChild(script);
+  });
+</script>

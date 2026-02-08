@@ -15,7 +15,7 @@ const plans = [
       'Link directo a WhatsApp y redes sociales',
       'Dominio gratuito incluido',
       'Mapa de ubicación',
-      'Soporte mensual (opcional): $15,000'
+      'Soporte mensual (opcional): $20,000'
     ],
     buttonText: 'Contratar Plan',
     buttonIcon: 'fa-bolt',
@@ -36,7 +36,7 @@ const plans = [
       'Formulario de contacto con envío a tu email',
       'Mapa de ubicación',
       'Dominio gratuito incluido',
-      'Soporte mensual (opcional): $15,000'
+      'Soporte mensual (opcional): $30,000'
     ],
     buttonText: '¡Elige este Plan!',
     buttonIcon: 'fa-store',
@@ -63,6 +63,45 @@ const plans = [
     buttonIcon: 'fa-gift',
     featured: false,
     iconColor: '#e74c3c'
+  },
+  {
+    type: 'soporte',
+    title: 'Soporte Emprendedor',
+    price: '$20,000',
+    period: 'mensual',
+    description: 'Soporte para Emprendedores',
+    features: [
+      'Cambios de texto e imágenes',
+      'Actualizaciones menores',
+      'Mantenimiento preventivo',
+      'Control de actualizaciones',
+      'Respaldo de datos',
+      'Asistencia técnica prioritaria'
+    ],
+    buttonText: 'Contratar Soporte',
+    buttonIcon: 'fa-headset',
+    featured: false,
+    iconColor: '#9b59b6'
+  },
+  {
+    type: 'soporte-pyme',
+    title: 'Soporte PYME',
+    price: '$30,000',
+    period: 'mensual',
+    description: 'Soporte para PYMEs',
+    features: [
+      'Cambios de texto e imágenes',
+      'Actualizaciones menores',
+      'Mantenimiento preventivo',
+      'Control de actualizaciones',
+      'Respaldo de datos',
+      'Asistencia técnica prioritaria',
+      'Soporte extendido'
+    ],
+    buttonText: 'Contratar Soporte',
+    buttonIcon: 'fa-cogs',
+    featured: false,
+    iconColor: '#e67e22'
   }
 ];
 ---
@@ -70,13 +109,13 @@ const plans = [
 <section id="planes" class="pricing-section py-5">
   <div class="container">
     <h2 class="text-center gradient-text mb-5 section-title" style="color: #2c3e50;">Planes para Emprendedores y PYMEs</h2>
-    <p class="text-center text-dark mb-5" style="color: #2c3e50;">Soluciones digitales a medida para emprendedores y PYMEs en Posadas, Misiones y toda la provincia.</p>
+    <p class="text-center text-dark mb-5" style="color: #2c3e50;">Soluciones digitales a medida para emprendedores y PYMEs en Posadas, Misiones y toda la provincia. También ofrecemos soporte mensual para mantenimiento y cambios menores.</p>
 
     <div class="row g-4 justify-content-center">
       {plans.map(plan => (
         <div class="col-lg-4 col-md-6" style="overflow: visible;"> {/* Allow icon to overflow */}
           <div class={`pricing-card h-100 position-relative ${plan.type}-plan ${plan.featured ? 'featured-card' : ''}`} role="region" aria-labelledby={`plan-${plan.type}-title`}>
-            
+
             <div class="plan-icon text-center mb-4">
               <i class={`fas ${plan.buttonIcon} fa-3x`} style={{color: plan.iconColor}}></i>
             </div>
@@ -106,7 +145,7 @@ const plans = [
             </div>
 
             <div class="card-footer text-center border-0 bg-transparent">
-              <a href="#contacto" class={`btn ${plan.featured ? 'btn-primary' : 'btn-outline-light'} w-100`} aria-label={`Seleccionar plan ${plan.title} para contactar con TekohaTech`}>
+              <a href="#contacto" class={`btn ${plan.featured ? 'btn-primary' : plan.type === 'soporte' ? 'btn-outline-light' : 'btn-outline-light'} w-100`} aria-label={`Seleccionar plan ${plan.title} para contactar con TekohaTech`}>
                 <i class={`fas ${plan.buttonIcon} me-2`}></i>
                 {plan.buttonText}
               </a>
@@ -116,29 +155,6 @@ const plans = [
       ))}
     </div>
 
-    <div class="mt-5">
-        <h3 class="text-center gradient-text mb-4 section-title" style="color: #2c3e50;">Requisitos Adicionales</h3>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="requirements-card">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="requirement-item">
-                                <h5 class="gradient-text" style="color: #2c3e50;">Dominio Propio (.com, .com.ar)</h5>
-                                <p class="text-dark" style="color: #2c3e50;">El cliente debe registrar y ser propietario de su dominio. Podemos asesorarte en el proceso.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="requirement-item">
-                                <h5 class="gradient-text" style="color: #2c3e50;">Alojamiento Web (Hosting)</h5>
-                                <p class="text-dark" style="color: #2c3e50;">Necesario para sitios con WordPress. Te recomendamos proveedores de confianza según tu plan.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
   </div>
 </section>
 
