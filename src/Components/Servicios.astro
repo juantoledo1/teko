@@ -6,8 +6,8 @@ import '../styles/global.css';
 
 <section id="servicios" class="services-section py-5">
   <div class="container">
-    <h2 class="text-center gradient-text mb-5 section-title">Nuestros Servicios</h2>
-    <p class="h5 text-center text-light-contrast mb-5">En TekohaTech, nos especializamos en brindar soluciones web a pequeñas y medianas empresas (PYMES). Nuestro equipo de expertos en UX/UI diseño y desarrollo web, están listos para ayudarte a llevar tu negocio al siguiente nivel en línea.</p>
+    <h2 class="text-center gradient-text mb-5 section-title" style="color: #2c3e50;">Nuestros Servicios</h2>
+    <p class="h5 text-center text-dark mb-5" style="color: #2c3e50;">En TekohaTech, nos especializamos en brindar soluciones web a pequeñas y medianas empresas (PYMES). Nuestro equipo de expertos en UX/UI diseño y desarrollo web, están listos para ayudarte a llevar tu negocio al siguiente nivel en línea.</p>
 
     <div class="row g-4">
       <div class="col-md-6 col-lg-4">
@@ -17,7 +17,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de diseño web</span>
           </div>
           <h3 id="service-title-1" class="service-title gradient-text">Diseño Web a Medida</h3>
-          <p class="service-description text-light-contrast">Creamos sitios web con un diseño único y atractivo, que reflejen la identidad de tu marca. Nos aseguramos de que tu página web sea fácil de navegar y tenga una experiencia de usuario (UX) excepcional.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Creamos sitios web con un diseño único y atractivo, que reflejen la identidad de tu marca. Nos aseguramos de que tu página web sea fácil de navegar y tenga una experiencia de usuario (UX) excepcional.</p>
         </div>
       </div>
 
@@ -28,7 +28,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de diseño responsive</span>
           </div>
           <h3 id="service-title-2" class="service-title gradient-text">Desarrollo Web Responsive</h3>
-          <p class="service-description text-light-contrast">Desarrollamos sitios web que se adaptan perfectamente a todo tipo de dispositivos, desde computadoras de escritorio hasta smartphones. Tu sitio web se verá y funcionará a la perfección, sin importar cómo accedan tus clientes.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Desarrollamos sitios web que se adaptan perfectamente a todo tipo de dispositivos, desde computadoras de escritorio hasta smartphones. Tu sitio web se verá y funcionará a la perfección, sin importar cómo accedan tus clientes.</p>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de SEO</span>
           </div>
           <h3 id="service-title-3" class="service-title gradient-text">Optimización SEO</h3>
-          <p class="service-description text-light-contrast">Optimizamos tu sitio web para que aparezca entre los primeros resultados de búsqueda en Google y otros motores. Esto te ayudará a atraer más visitantes orgánicamente y aumentar tu presencia en línea.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Optimizamos tu sitio web para que aparezca entre los primeros resultados de búsqueda en Google y otros motores. Esto te ayudará a atraer más visitantes orgánicamente y aumentar tu presencia en línea.</p>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de mantenimiento</span>
           </div>
           <h3 id="service-title-4" class="service-title gradient-text">Mantenimiento y Actualizaciones</h3>
-          <p class="service-description text-light-contrast">Ofrecemos servicios de mantenimiento y actualizaciones continuas para asegurar que tu sitio web esté siempre al día, seguro y funcionando sin problemas.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Ofrecemos servicios de mantenimiento y actualizaciones continuas para asegurar que tu sitio web esté siempre al día, seguro y funcionando sin problemas.</p>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de soporte</span>
           </div>
           <h3 id="service-title-5" class="service-title gradient-text">Soporte Técnico</h3>
-          <p class="service-description text-light-contrast">Nuestro equipo de soporte está disponible para ayudarte con cualquier duda o problema que puedas tener, garantizando la continuidad de tu negocio en línea.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Nuestro equipo de soporte está disponible para ayudarte con cualquier duda o problema que puedas tener, garantizando la continuidad de tu negocio en línea.</p>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ import '../styles/global.css';
             <span class="visually-hidden">Icono de e-commerce</span>
           </div>
           <h3 id="service-title-6" class="service-title gradient-text">E-Commerce</h3>
-          <p class="service-description text-light-contrast">Creamos tiendas online totalmente funcionales con sistemas de pago integrados, inventario y experiencia de compra optimizada para convertir visitantes en clientes.</p>
+          <p class="service-description text-dark" style="color: #2c3e50;">Creamos tiendas online totalmente funcionales con sistemas de pago integrados, inventario y experiencia de compra optimizada para convertir visitantes en clientes.</p>
         </div>
       </div>
     </div>
@@ -86,14 +86,15 @@ import '../styles/global.css';
 
 <style>
   .service-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     padding: 30px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(52, 152, 219, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
+    color: #2c3e50;
   }
 
   .service-card::before {
@@ -103,7 +104,7 @@ import '../styles/global.css';
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #4fc3f7, #00e676);
+    background: linear-gradient(90deg, #3498db, #1abc9c);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -111,8 +112,8 @@ import '../styles/global.css';
 
   .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
   }
 
   .service-card:hover::before {
@@ -120,7 +121,7 @@ import '../styles/global.css';
   }
 
   .service-icon {
-    color: #4fc3f7;
+    color: #3498db;
     display: flex;
     justify-content: center;
   }
@@ -144,10 +145,11 @@ import '../styles/global.css';
   }
 
   .services-section {
-    background: linear-gradient(45deg, #0a0908, #1a237e);
+    background: linear-gradient(135deg, #ecf0f1, #ffffff);
     position: relative;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    color: #2c3e50;
   }
   /* Efecto de transición suave entre secciones */
   .services-section::before {
@@ -157,14 +159,14 @@ import '../styles/global.css';
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+    background: linear-gradient(90deg, transparent, #3498db, transparent);
     filter: blur(1px);
   }
 
   .btn-primary {
-    background-color: #00e676;
-    border-color: #00e676;
-    color: #1a237e;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    color: #ffffff;
     font-weight: 700;
     padding: 12px 30px;
     border-radius: 50px;
@@ -172,10 +174,10 @@ import '../styles/global.css';
   }
 
   .btn-primary:hover {
-    background-color: #00c853;
-    border-color: #00c853;
+    background-color: #16a085;
+    border-color: #16a085;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 230, 118, 0.3);
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
   }
 
   @media (max-width: 768px) {

@@ -1,74 +1,76 @@
 ---
-// Data for the pricing plans, adjusted for local SMEs in Posadas.
-// Prices updated to USD (U$S).
+// Data for the pricing plans, adjusted for entrepreneurs and SMEs in Posadas, Misiones.
+// Prices in Argentine Pesos (ARS).
 const plans = [
   {
-    type: 'pyme',
-    title: 'Mi Primer Web',
-    price: 'U$S 299',
+    type: 'emprendedor',
+    title: 'Emprendedor',
+    price: '$75,000',
     period: 'único',
-    description: 'Landing Page Estática',
+    description: 'Landing Page para Emprendedores',
     features: [
-      'Diseño moderno y adaptativo',
-      'Hasta 4 secciones (Inicio, Servicios, etc.)',
-      'Optimización básica para buscadores (SEO)',
-      'Formulario de contacto',
-      'Links a redes sociales',
-      'Botón directo a WhatsApp',
-      'Soporte mensual (opcional): U$S 35'
+      'Diseño moderno y responsive',
+      'Hasta 4 secciones',
+      'Hasta 5 fotos que nos envíes',
+      'Link directo a WhatsApp y redes sociales',
+      'Dominio gratuito incluido',
+      'Mapa de ubicación',
+      'Soporte mensual (opcional): $15,000'
     ],
-    buttonText: 'Consultar Ahora',
-    buttonIcon: 'fa-paper-plane',
+    buttonText: 'Contratar Plan',
+    buttonIcon: 'fa-bolt',
     featured: false,
-    iconColor: '#4fc3f7'
+    iconColor: '#3498db'
   },
   {
-    type: 'empresa',
-    title: 'Web Empresa',
-    price: 'U$S 499',
+    type: 'pyme',
+    title: 'PYME Local',
+    price: '$130,000',
     period: 'único',
-    description: 'Sitio autoadministrable con WordPress',
+    description: 'Landing Page para PYMEs',
     features: [
-      'Panel para gestionar contenido (WordPress)',
-      'Hasta 6 secciones + Blog',
-      'Diseño premium personalizado',
-      'Optimización SEO Avanzada',
-      'Galería de fotos y videos',
-      'Integración con redes sociales',
-      'Soporte mensual (opcional): U$S 55'
+      'Diseño moderno y responsive',
+      'Hasta 5 secciones',
+      'Hasta 10 fotos que nos envíes',
+      'Link directo a WhatsApp y redes sociales',
+      'Formulario de contacto con envío a tu email',
+      'Mapa de ubicación',
+      'Dominio gratuito incluido',
+      'Soporte mensual (opcional): $15,000'
     ],
     buttonText: '¡Elige este Plan!',
-    buttonIcon: 'fa-bolt',
+    buttonIcon: 'fa-store',
     featured: true,
-    iconColor: '#00e676'
+    iconColor: '#1abc9c'
   },
   {
-    type: 'premium',
-    title: 'Web Premium',
-    price: 'U$S 699',
+    type: 'invitaciones',
+    title: 'Invitaciones Web',
+    price: '$85,000',
     period: 'único',
-    description: 'E-Commerce con WordPress',
+    description: 'Invitaciones para Eventos',
     features: [
-      'Tienda online completa (WooCommerce)',
-      'Carga inicial de hasta 20 productos',
-      'Integración con Mercado Pago',
-      'Optimización SEO para E-commerce',
-      'Carrito de compras y gestión de pedidos',
-      'Diseño 100% orientado a la venta',
-      'Soporte mensual (opcional): U$S 85'
+      'Invitaciones personalizadas para eventos',
+      'Cumpleaños, bodas, lanzamientos',
+      'Duración de 3 meses en la nube',
+      'Botón de confirmación de asistencia',
+      'Botón de código de etiqueta de vestimenta',
+      'Botón de donaciones',
+      'Mapa de ubicación',
+      'Pago único'
     ],
-    buttonText: 'Vender Online',
-    buttonIcon: 'fa-star',
+    buttonText: 'Crear Invitación',
+    buttonIcon: 'fa-gift',
     featured: false,
-    iconColor: '#ff4081'
+    iconColor: '#e74c3c'
   }
 ];
 ---
 
 <section id="planes" class="pricing-section py-5">
   <div class="container">
-    <h2 class="text-center gradient-text mb-5 section-title">Nuestros Planes de Desarrollo Web</h2>
-    <p class="text-center text-light-contrast mb-5">Soluciones a medida para emprendedores y PYMEs en Posadas, Misiones.</p>
+    <h2 class="text-center gradient-text mb-5 section-title" style="color: #2c3e50;">Planes para Emprendedores y PYMEs</h2>
+    <p class="text-center text-dark mb-5" style="color: #2c3e50;">Soluciones digitales a medida para emprendedores y PYMEs en Posadas, Misiones y toda la provincia.</p>
 
     <div class="row g-4 justify-content-center">
       {plans.map(plan => (
@@ -88,9 +90,8 @@ const plans = [
               <h3 id={`plan-${plan.type}-title`} class="plan-name gradient-text mb-2">{plan.title}</h3>
               <div class="plan-price mb-2">
                 <span class="price-amount text-success">{plan.price}</span>
-                <span class="text-light-contrast">/{plan.period}</span>
               </div>
-              <p class="plan-description text-light-contrast">{plan.description}</p>
+              <p class="plan-description text-dark" style="color: #2c3e50;">{plan.description}</p>
             </div>
 
             <div class="card-body">
@@ -98,7 +99,7 @@ const plans = [
                 {plan.features.map(feature => (
                   <li class="feature-item d-flex align-items-center mb-3">
                     <i class="fas fa-check-circle text-success me-2"></i>
-                    <span class="text-light">{feature}</span>
+                    <span class="text-dark" style="color: #2c3e50;">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -116,21 +117,21 @@ const plans = [
     </div>
 
     <div class="mt-5">
-        <h3 class="text-center gradient-text mb-4 section-title">Requisitos Adicionales</h3>
+        <h3 class="text-center gradient-text mb-4 section-title" style="color: #2c3e50;">Requisitos Adicionales</h3>
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="requirements-card">
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="requirement-item">
-                                <h5 class="gradient-text">Dominio Propio (.com, .com.ar)</h5>
-                                <p class="text-light-contrast">El cliente debe registrar y ser propietario de su dominio. Podemos asesorarte en el proceso.</p>
+                                <h5 class="gradient-text" style="color: #2c3e50;">Dominio Propio (.com, .com.ar)</h5>
+                                <p class="text-dark" style="color: #2c3e50;">El cliente debe registrar y ser propietario de su dominio. Podemos asesorarte en el proceso.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="requirement-item">
-                                <h5 class="gradient-text">Alojamiento Web (Hosting)</h5>
-                                <p class="text-light-contrast">Necesario para sitios con WordPress. Te recomendamos proveedores de confianza según tu plan.</p>
+                                <h5 class="gradient-text" style="color: #2c3e50;">Alojamiento Web (Hosting)</h5>
+                                <p class="text-dark" style="color: #2c3e50;">Necesario para sitios con WordPress. Te recomendamos proveedores de confianza según tu plan.</p>
                             </div>
                         </div>
                     </div>
@@ -143,30 +144,32 @@ const plans = [
 
 <style>
   .pricing-section {
-    background: linear-gradient(45deg, #0a0908, #1a237e);
+    background: linear-gradient(135deg, #ecf0f1, #ffffff);
     position: relative;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    color: #2c3e50;
   }
 
   .pricing-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.2);
     backdrop-filter: blur(10px);
     /* overflow: hidden; --- This was cutting off the icon, so it's removed. */
     transition: all 0.4s ease;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     word-wrap: break-word; /* Prevents overflow */
+    color: #2c3e50;
   }
 
   .pricing-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
   }
 
   .card-header {
@@ -180,14 +183,14 @@ const plans = [
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background: #1a237e;
+    background: #ffffff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
   .plan-name {
@@ -201,9 +204,20 @@ const plans = [
     font-weight: 800;
   }
 
+  .plan-price-ars {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
   .price-amount {
     font-size: 2.8rem;
     font-weight: 900;
+  }
+
+  .price-ars-amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #7f8c8d;
   }
 
   .plan-description {
@@ -228,8 +242,8 @@ const plans = [
   }
 
   .btn-outline-light {
-    border-color: #4fc3f7;
-    color: #4fc3f7;
+    border-color: #3498db;
+    color: #3498db;
     padding: 14px 20px;
     border-radius: 50px;
     font-weight: 700;
@@ -238,36 +252,36 @@ const plans = [
   }
 
   .btn-outline-light:hover {
-    background-color: #4fc3f7;
-    color: #1a237e;
+    background-color: #3498db;
+    color: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(79, 195, 247, 0.4);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
   }
 
   .btn-primary {
-    background: linear-gradient(45deg, #00e676, #4fc3f7);
+    background: linear-gradient(45deg, #1abc9c, #3498db);
     border: none;
-    color: #1a237e;
+    color: #ffffff;
     font-weight: 700;
     padding: 14px 35px;
     border-radius: 50px;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
-    box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.4);
   }
 
   .btn-primary:hover {
-    background: linear-gradient(45deg, #00c853, #2196f3);
+    background: linear-gradient(45deg, #16a085, #2980b9);
     color: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 230, 118, 0.6);
+    box-shadow: 0 15px 30px rgba(26, 188, 156, 0.6);
   }
 
   .featured-card {
-    border: 2px solid #00e676;
+    border: 2px solid #1abc9c;
     transform: scale(1.05);
     z-index: 10;
-    background: rgba(26, 35, 126, 0.15);
+    background: rgba(255, 255, 255, 0.95);
   }
 
   .featured-card:hover {
@@ -291,17 +305,17 @@ const plans = [
 
   .requirement-item {
     padding: 20px;
-    background: rgba(26, 35, 126, 0.2);
+    background: rgba(236, 240, 241, 0.5);
     border-radius: 12px;
-    border-left: 4px solid #4fc3f7;
+    border-left: 4px solid #3498db;
     transition: all 0.3s ease;
     height: 100%;
   }
 
   .requirement-item:hover {
     transform: translateY(-5px);
-    background: rgba(26, 35, 126, 0.3);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(236, 240, 241, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   }
 
   @media (max-width: 991.98px) {

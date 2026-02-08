@@ -1,15 +1,13 @@
 ---
 import Banner from "../Components/Banner.astro"
 import Navbar from "../Components/Navbar.astro"
-import Cards from "../Components/Cards.astro"
-import Footer from "../Components/Footer.astro"
 import Servicios  from "../Components/Servicios.astro"
 import Planes from "../Components/Planes.astro"
 import Contacto from "../Components/Contacto.astro"
 import Procesos from "../Components/Procesos.astro"
+import Footer from "../Components/Footer.astro"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nosotros from "../Components/Nosotros.astro"
 import '../styles/global.css';
 
 
@@ -61,13 +59,50 @@ import '../styles/global.css';
 	<body>
 		<Navbar/>
 		<Banner/>
-		<Nosotros/>
-		<Cards/>
 		<Servicios/>
 		<Procesos/>
 		<Planes/>
 		<Contacto/>
 		<Footer/>
+
+		<!-- JavaScript for animations -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Fade-in animations for sections as they come into view
+				const observerOptions = {
+					root: null,
+					rootMargin: '0px',
+					threshold: 0.1
+				};
+
+				const observer = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('fade-in-up');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, observerOptions);
+
+				// Observe all sections
+				document.querySelectorAll('section').forEach((section, index) => {
+					section.classList.add('fade-in-up', `delay-${index}`);
+					observer.observe(section);
+				});
+
+				// Add hover animations to cards
+				const cards = document.querySelectorAll('.service-card, .pricing-card, .process-step, .contact-option-card, .contact-form-card');
+				cards.forEach(card => {
+					card.addEventListener('mouseenter', function() {
+						this.style.transform = 'translateY(-10px)';
+					});
+					
+					card.addEventListener('mouseleave', function() {
+						this.style.transform = 'translateY(0)';
+					});
+				});
+			});
+		</script>
 
 		<!-- Carga diferida de scripts no críticos -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>

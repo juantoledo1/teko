@@ -3,18 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
 
 const contactInfo = {
-  whatsapp: [
-    { number: "+54 9 3764 67-4458", link: "https://wa.me/5493764674458" },
-  ],
   email: "tekohatech@gmail.com",
+  instagram: "@tekohatech",
   businessHours: "Lunes a Viernes: 9:00 - 18:00"
 };
 ---
 
 <section id="contacto" class="contact-section py-5">
   <div class="container mt-0 pt-3">
-    <h2 class="text-center gradient-text mb-5 section-title">Contacto</h2>
-    <p class="text-center text-light-contrast mb-5">Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+    <h2 class="text-center gradient-text mb-5 section-title" style="color: #2c3e50;">Contacto</h2>
+    <p class="text-center text-dark mb-5" style="color: #2c3e50;">Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
 
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -23,11 +21,30 @@ const contactInfo = {
             <div class="contact-option-card">
               <div class="d-flex align-items-center">
                 <div class="contact-icon-container me-3">
-                  <i class="fas fa-envelope fa-3x" style="color: #4fc3f7;"></i>
+                  <i class="fab fa-instagram fa-3x" style="color: #3498db;"></i>
                 </div>
                 <div class="flex-grow-1">
-                  <h3 class="text-light mb-2" style="font-family: 'Inter', sans-serif; font-weight: 700;">Email</h3>
-                  <p class="text-light-contrast mb-0">{contactInfo.email}</p>
+                  <h3 class="text-dark mb-2" style="font-family: 'Inter', sans-serif; font-weight: 700; color: #2c3e50;">Instagram</h3>
+                  <p class="text-dark mb-0" style="color: #2c3e50;">{contactInfo.instagram}</p>
+                </div>
+              </div>
+              <div class="contact-button-container mt-3 d-flex justify-content-center">
+                <a href="#" class="contact-btn instagram-btn text-decoration-none">
+                  <i class="fab fa-instagram me-2"></i>Seguir en Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="contact-option-card">
+              <div class="d-flex align-items-center">
+                <div class="contact-icon-container me-3">
+                  <i class="fas fa-envelope fa-3x" style="color: #1abc9c;"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h3 class="text-dark mb-2" style="font-family: 'Inter', sans-serif; font-weight: 700; color: #2c3e50;">Email</h3>
+                  <p class="text-dark mb-0" style="color: #2c3e50;">{contactInfo.email}</p>
                 </div>
               </div>
               <div class="contact-button-container mt-3 d-flex justify-content-center">
@@ -38,24 +55,10 @@ const contactInfo = {
             </div>
           </div>
 
-          <div class="col-md-6 mb-4">
-            <div class="contact-option-card">
-              <div class="d-flex align-items-center">
-                <div class="contact-icon-container me-3">
-                  <i class="fas fa-clock fa-3x" style="color: #00e676;"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <h3 class="text-light mb-2" style="font-family: 'Inter', sans-serif; font-weight: 700;">Horario de Atención</h3>
-                  <p class="text-light-contrast mb-0">{contactInfo.businessHours}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Formulario de contacto -->
           <div class="col-12">
             <div class="contact-form-card">
-              <h3 class="text-light mb-4" style="font-family: 'Inter', sans-serif; font-weight: 700;">Envíanos un mensaje</h3>
+              <h3 class="text-dark mb-4" style="font-family: 'Inter', sans-serif; font-weight: 700; color: #2c3e50;">Envíanos un mensaje</h3>
 
               <!-- Formulario de contacto estándar de Netlify -->
               <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -65,38 +68,41 @@ const contactInfo = {
                 </div>
 
                 <div class="form-group mb-3">
-                  <label for="name" class="form-label text-light">Nombre <span class="text-danger">*</span></label>
+                  <label for="name" class="form-label text-dark" style="color: #2c3e50;">Nombre <span class="text-danger">*</span></label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-light p-3 w-100"
+                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-dark p-3 w-100"
                     placeholder="Tu nombre o empresa"
+                    style="color: #2c3e50;"
                   />
                 </div>
 
                 <div class="form-group mb-3">
-                  <label for="email" class="form-label text-light">Email <span class="text-danger">*</span></label>
+                  <label for="email" class="form-label text-dark" style="color: #2c3e50;">Email <span class="text-danger">*</span></label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-light p-3 w-100"
+                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-dark p-3 w-100"
                     placeholder="hola@ejemplo.com"
+                    style="color: #2c3e50;"
                   />
                 </div>
 
                 <div class="form-group mb-4">
-                  <label for="message" class="form-label text-light">Mensaje <span class="text-danger">*</span></label>
+                  <label for="message" class="form-label text-dark" style="color: #2c3e50;">Mensaje <span class="text-danger">*</span></label>
                   <textarea
                     id="message"
                     name="message"
                     required
                     rows="4"
-                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-light p-3 w-100"
+                    class="form-control bg-dark bg-opacity-20 border border-secondary border-opacity-20 rounded-lg text-dark p-3 w-100"
                     placeholder="¿En qué puedo ayudarte?"
+                    style="color: #2c3e50;"
                   ></textarea>
                 </div>
 
@@ -127,10 +133,11 @@ const contactInfo = {
   }
 
   .contact-section {
-    background: linear-gradient(45deg, #0a0908, #1a237e);
+    background: linear-gradient(135deg, #ecf0f1, #ffffff);
     position: relative;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    color: #2c3e50;
   }
 
   .contact-section::before {
@@ -140,25 +147,26 @@ const contactInfo = {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+    background: linear-gradient(90deg, transparent, #3498db, transparent);
     filter: blur(1px);
   }
 
   .contact-option-card, .contact-form-card {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(52, 152, 219, 0.15);
     position: relative;
     overflow: hidden;
+    color: #2c3e50;
   }
 
   .contact-option-card:hover, .contact-form-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
   }
 
   .contact-icon-container {
@@ -168,30 +176,30 @@ const contactInfo = {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgba(79, 195, 247, 0.1);
+    background-color: rgba(52, 152, 219, 0.1);
   }
-  
+
   .form-control {
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(26, 35, 126, 0.3) !important;
+    color: #2c3e50;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    background-color: #ffffff !important;
   }
 
   .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(44, 62, 80, 0.5);
   }
 
   .form-control:focus {
-    color: #ffffff;
-    background-color: rgba(26, 35, 126, 0.4) !important;
-    border-color: #4fc3f7;
-    box-shadow: 0 0 0 0.25rem rgba(79, 195, 247, 0.25);
+    color: #2c3e50;
+    background-color: #ffffff !important;
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
   }
 
   .btn-primary {
-    background-color: #00e676;
-    border-color: #00e676;
-    color: #1a237e;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    color: #ffffff;
     font-weight: 700;
     padding: 12px 30px;
     border-radius: 50px;
@@ -199,9 +207,41 @@ const contactInfo = {
   }
 
   .btn-primary:hover {
-    background-color: #00c853;
-    border-color: #00c853;
+    background-color: #16a085;
+    border-color: #16a085;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 230, 118, 0.3);
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
+  }
+  
+  .instagram-btn {
+    background-color: #3498db;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .instagram-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+  }
+  
+  .email-btn {
+    background-color: #1abc9c;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .email-btn:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
   }
 </style>
